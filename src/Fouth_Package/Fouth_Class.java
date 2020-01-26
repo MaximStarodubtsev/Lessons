@@ -5,23 +5,26 @@ import java.util.Scanner;
 
 public class Fouth_Class {
     public static void main(String [] args){
-//        Scanner scan = new Scanner(System.in);
-//        System.out.println("Введите одну сторону первого дома:");
-//        int a = scan.nextInt();
-//        System.out.println("Введите другую сторону первого дома:");
-//        int b = scan.nextInt();
-//        System.out.println("Введите одну сторону второго дома:");
-//        int c = scan.nextInt();
-//        System.out.println("Введите другую сторону второго дома:");
-//        int d = scan.nextInt();
-//        System.out.println("Введите одну сторону площади размещения:");
-//        int f = scan.nextInt();
-//        System.out.println("Введите другую сторону площади размещения:");
-//        int e = scan.nextInt();
-//        if (checkSizes(a,b,c,d,e,f)){
-//            System.out.println("Дома вмещаются");
-//        } else System.out.println("Дома не вмещаются");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите одну сторону первого дома:");
+        int a = scan.nextInt();
+        System.out.println("Введите другую сторону первого дома:");
+        int b = scan.nextInt();
+        System.out.println("Введите одну сторону второго дома:");
+        int c = scan.nextInt();
+        System.out.println("Введите другую сторону второго дома:");
+        int d = scan.nextInt();
+        System.out.println("Введите одну сторону площади размещения:");
+        int f = scan.nextInt();
+        System.out.println("Введите другую сторону площади размещения:");
+        int e = scan.nextInt();
+        if (checkSizes(a,b,c,d,e,f)){
+            System.out.println("Дома вмещаются");
+        } else System.out.println("Дома не вмещаются");
 
+    }
+
+    private static void mergeSort() {
         ArrayList<Integer> a = new ArrayList<>();
         a.add(1);
         a.add(2);
@@ -51,6 +54,7 @@ public class Fouth_Class {
         }
         System.out.println(a.toString());
     }
+
     public static boolean checkSizes(int a, int b, int c, int d, int e, int f){
         return ((a+c <=e&&b+d <=f)||(a+d<=e&&b+c<=f)||(a+c<=f&&b+d<=e)||(a+d<=f&&b+c<=e));
     }
