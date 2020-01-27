@@ -44,10 +44,10 @@ public class Fouth_Class {
                 } else if (i == (size1 - 1 )) {
                     a.add(size1, buf);
 
-                    /*int buffer;
+                    int buffer;
                     buffer = (int) a.toArray()[i];
                     a.toArray()[i] = a.toArray()[i - 1];
-                    a.toArray()[i - 1] = buffer;*/
+                    a.toArray()[i - 1] = buffer;
                     break;
                 }
             }
@@ -56,7 +56,13 @@ public class Fouth_Class {
     }
 
     public static boolean checkSizes(int a, int b, int c, int d, int e, int f){
-        return ((a+c <=e&&b+d <=f)||(a+d<=e&&b+c<=f)||(a+c<=f&&b+d<=e)||(a+d<=f&&b+c<=e));
+        return utilCheck(a,b,c,d,e,f)||utilCheck(a,b,c,d,f,e);
+    }
+
+    public static boolean utilCheck(int a, int b, int c, int d, int e, int f){
+        return ((a+c <=e&&b+d <=f)||(a+d<=e&&b+c<=f)||(a+c<=f&&b+d<=e)||(a+d<=f&&b+c<=e)) ||
+                (a+c<=e&&(b<=f&&d<=b)) ||(a+d<=e&&(b<=f&&c<=b)) ||(b+c<=e&&a<=f&&d<=a)||(b+d<=e&&a<=f&&c<=a)||
+                (c+a<=e&&(d<=f)&&b<=d) ||(c+b<=e&&d<=f&&a<=d)|| (d+a<=e&&b<=c&&c<=f)||(d+b<=e&&a<=c&&c<=f);
     }
 
     //задание номер 9
