@@ -138,7 +138,7 @@ public static void printOffset(){
                     System.out.println(returnDate(num,"Январь", year));
                 break;
             case (2):
-              if (num ==28 && (year%4==0))                 {
+              if (num ==28 && (((year%4==0)&&(year%100!=0))||((year%4==0)&&(year%400==0)))){
                 num++;
                   System.out.println(returnDate(num,"Февраль", year));}
                 else if (num==29) {
